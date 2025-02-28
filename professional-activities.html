@@ -1,0 +1,148 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.1//EN"
+  "http://www.w3.org/TR/xhtml11/DTD/xhtml11.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xml:lang="en">
+<head>
+<meta name="generator" content="jemdoc, see http://jemdoc.jaboc.net/" />
+<meta http-equiv="Content-Type" content="text/html;charset=utf-8" />
+<link rel="stylesheet" href="jemdoc.css" type="text/css" />
+<title>Professional Activities</title>
+</head>
+<body>
+<table summary="Table for page layout." id="tlayout">
+<tr valign="top">
+  <td id="layout-menu"  style="vertical-align: top; height: 100vh; background-color: #f6f6f6; ">   
+    <div class="menu-category">Resume</div>
+    <div class="menu-item"><a href="index.html">Home</a></div>
+    <div class="menu-item"><a href="teaching.html">Teaching</a></div>
+    <div class="menu-item"><a href="publication.html">Publications</a></div>
+    <div class="menu-item"><a href="research-projects.html">Fellowships/Projects</a></div>
+    <div class="menu-item"><a href="awards.html">Awards </a></div>
+    <div class="menu-item"><a href="professional-activities.html" class="current">Professional Activities</a></div>
+    <div class="menu-item"><a href="oshinCV.pdf" target="_blank">CV</a></div>
+    </td>
+<td id="layout-content">
+<div id="toptitle">
+<h1>Professional Activities</h1>
+</div>
+<h2>Manuscripts Presented</h2>
+
+<ul style="padding-left: 15px;">
+  <li style="margin-bottom: 10px;">
+    Presented a paper and poster at the <a href="https://ieeexplore.ieee.org/abstract/document/10588439">IEEE Intelligent Vehicles Symposium (IV 2024)</a>, Jeju Island, South Korea.
+  </li>
+  <li style="margin-bottom: 10px;">
+    Presented a paper at the <a href="https://ieeexplore.ieee.org/abstract/document/10757588">IEEE 100th Vehicular Technology Conference (VTC2024-Fall)</a>, Washington DC, USA.
+  </li>
+  <li style="margin-bottom: 10px;">
+    Participated in the <a href="https://ieeexplore.ieee.org/abstract/document/10150396/">21st International Conference on Pervasive Computing and Communications (PerCom 2023)</a>, Atlanta, Georgia, USA, for a paper presentation.
+  </li>
+  <li style="margin-bottom: 10px;">
+    Delivered a paper presentation at the <a href="https://ieeexplore.ieee.org/abstract/document/9814532">IEEE International Conference on Communications (ICC)</a>, Seoul, South Korea.
+  </li>
+  <li>
+    Successfully completed a Certification Level 1 in IoT and IoE from the TIH Foundation, with participation recognized by IIT Bombay.
+  </li>
+</ul>
+
+
+<h2>Posters Presented</h2>
+<div style="display: grid; grid-template-columns: repeat(auto-fit, minmax(200px, 1fr)); gap: 16px; margin-top: 20px;">
+  <div style="text-align: center;">
+    <img src="poster1_1.png" alt="Poster 1" class="poster" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); cursor: pointer;">
+    <p>CSIS, BITS PILANI </p>
+  </div>
+  <div style="text-align: center;">
+    <img src="poster2_1.png" alt="Poster 2" class="poster" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); cursor: pointer;">
+    <p>CSIS, BITS PILANI </p>
+  </div>
+  <div style="text-align: center;">
+    <img src="poster3_1.png" alt="Poster 3" class="poster" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); cursor: pointer;">
+    <p>CSIS, BITS PILANI </p>
+  </div>
+  <div style="text-align: center;">
+    <img src="poster4_1.png" alt="Poster 4" class="poster" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); cursor: pointer;">
+    <p>IEEE IV, Jeju Island </p>
+  </div>
+  <div style="text-align: center;">
+    <img src="poster5_1.png" alt="Poster 5" class="poster" style="width: 100%; border-radius: 8px; box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1); cursor: pointer;">
+    <p> CSIS, BITS PILANI </p>
+  </div>
+</div>
+
+
+<!-- Modal -->
+<div id="modal" style="display: none; position: fixed; top: 0; left: 0; width: 100%; height: 100%; background: rgba(0, 0, 0, 0.8); justify-content: center; align-items: center; z-index: 1000;">
+  <button id="closeBtn" style="position: absolute; top: 10px; right: 10px; font-size: 24px; color: white; background: none; border: none; cursor: pointer;">&times;</button>
+  <div style="max-width: 80%; max-height: 80%; position: relative;">
+    <img id="modalImg" src="" alt="Enlarged Poster" 
+    style="width: 1200px; height: 650px; max-width: 90vw; max-height: 90vh; 
+           border-radius: 8px;">
+ </div>
+</div>
+
+<script>
+  const posters = document.querySelectorAll('.poster');
+  const modal = document.getElementById('modal');
+  const modalImg = document.getElementById('modalImg');
+  const closeBtn = document.getElementById('closeBtn');
+
+  // Open modal on poster click
+  posters.forEach(poster => {
+    poster.addEventListener('click', () => {
+      modal.style.display = 'flex';
+      modalImg.src = poster.src; // Set the modal image source to the clicked poster
+    });
+  });
+
+  // Close modal on close button click
+  closeBtn.addEventListener('click', () => {
+    modal.style.display = 'none';
+  });
+
+  // Close modal when clicking outside the image
+  modal.addEventListener('click', (e) => {
+    if (e.target === modal) {
+      modal.style.display = 'none';
+    }
+  });
+</script>
+
+<h2 style="margin-top: -10px;">Review Committee Member</h2>
+<div style="margin-top: 20px;">
+  <ul style="padding-left: 15px;">
+    <li style="margin-bottom: 10px;">Ad Hoc Networks</li>
+    <li style="margin-bottom: 10px;">IEEE Transactions on Intelligent Transportation Systems</li>
+    <li style="margin-bottom: 10px;">Artificial Intelligence</li>
+    <li style="margin-bottom: 10px;">Cluster Computing</li>
+    <li style="margin-bottom: 10px;">IEEE Journal of Biomedical and Health Informatics</li>
+    <li style="margin-bottom: 10px;">Wireless Personal Communications</li>
+    <li style="margin-bottom: 10px;">The Journal of Supercomputing</li>
+    <li style="margin-bottom: 10px;">Multiscale and Multidisciplinary Modeling, Experiments and Design</li>
+  </ul>
+  
+  <p><b>Actively reviewing Conference listed:</b></p>
+  <ul style="padding-left: 15px;">
+    <li>International Conference on Frontiers in Computing and Systems (COMSYS-2023)</li>
+  </ul>
+</div>
+
+<h2>Professional Memberships</h2>
+
+<ul style="padding-left: 15px;">
+  <li>
+    IEEE Student Member- 97841089
+  </li>
+</ul>
+
+<ul style="padding-left: 15px;">
+  <li>
+    ACM Student Member- 6790855
+  </li>
+</ul>
+
+
+</td>
+</tr>
+</table>
+</body>
+</html>
