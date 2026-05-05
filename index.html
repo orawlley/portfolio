@@ -292,6 +292,29 @@
     font-weight: 700;
     color: #1f2933;
   }
+    /* ===== Academic affiliation block below name and designation ===== */
+.affiliation-block {
+  margin-top: 8px;
+  margin-bottom: 10px;
+  padding-left: 12px;
+  border-left: 3px solid rgba(70, 130, 180, 0.45);
+  font-family: "Noto Serif KR", "Georgia", "Times New Roman", serif;
+  font-size: 0.95rem;
+  line-height: 1.62;
+  letter-spacing: 0.01em;
+  color: #31465a;
+}
+
+.affiliation-block a {
+  color: #31465a !important;
+  text-decoration: none !important;
+  font-weight: 500;
+}
+
+.affiliation-block a:hover {
+  color: #1f5f8f !important;
+  text-decoration: underline !important;
+}
 
   .affiliation-logo-strip {
     display: flex;
@@ -492,20 +515,19 @@
         </td>
         <td class="profile-info" align="left" style="padding-left: 30px;">
 
-  <div class="role-logo-row">
-    <div class="role-text-block">
-      <p style="margin: 0;">
-        <b>Oshin Rawlley</b><br/>
-        <span class="role-title">Postdoctoral Researcher</span>
-      </p>
-    </div>
+  <div class="role-text-block">
+    <p style="margin: 0;">
+      <b>Oshin Rawlley</b><br/>
+      <span class="role-title">Postdoctoral Researcher</span>
+    </p>
+  </div>
 
-  <p style="margin-top: 0.4vw;">
-    <a href="https://inmc.snu.ac.kr/">Institute of New Media and Communications (INMC),</a> <br />
+  <div class="affiliation-block">
+    <a href="https://inmc.snu.ac.kr/">Institute of New Media and Communications (INMC),</a><br />
     <a href="https://ece.snu.ac.kr/en/research-faculty/research/groups?md=view&labidx=145">Advanced Intelligent Systems Lab (AISLab),</a><br />
-    <a href="https://ece.snu.ac.kr/en">Department of Electrical and Computer Engineering,</a> <br />
-    <a href="https://en.snu.ac.kr/">Seoul National University, Republic of Korea</a> <br />
-  </p>
+    <a href="https://ece.snu.ac.kr/en">Department of Electrical and Computer Engineering,</a><br />
+    <a href="https://en.snu.ac.kr/">Seoul National University, Republic of Korea</a>
+  </div>
 
   <!--<div style="margin-top: 0.5vw; display: flex;">
     <b style="white-space: nowrap;">Address: </b>
