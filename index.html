@@ -66,8 +66,362 @@
     }
   }
 </style>
+  <style type="text/css">
+  /* ===== Aesthetic White Academic Background ===== */
+
+  html {
+    min-height: 100%;
+    scroll-behavior: smooth;
+  }
+
+  body.white-academic-bg {
+    min-height: 100%;
+    margin: 0;
+    font-family: "Noto Sans KR", "Pretendard", "Inter", "Segoe UI", Arial, sans-serif;
+    color: #1f2933;
+    background:
+      radial-gradient(circle at 12% 10%, rgba(70, 130, 180, 0.12), transparent 28%),
+      radial-gradient(circle at 88% 18%, rgba(120, 170, 210, 0.10), transparent 30%),
+      radial-gradient(circle at 50% 95%, rgba(210, 230, 245, 0.50), transparent 38%),
+      linear-gradient(135deg, #ffffff 0%, #f8fbfd 42%, #eef6fb 100%);
+    background-attachment: fixed;
+    position: relative;
+  }
+
+  /* Subtle technical grid background */
+  body.white-academic-bg::before {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    background-image:
+      linear-gradient(rgba(70, 130, 180, 0.055) 1px, transparent 1px),
+      linear-gradient(90deg, rgba(70, 130, 180, 0.055) 1px, transparent 1px);
+    background-size: 36px 36px;
+    mask-image: linear-gradient(to bottom, rgba(0,0,0,0.72), rgba(0,0,0,0.18));
+    -webkit-mask-image: linear-gradient(to bottom, rgba(0,0,0,0.72), rgba(0,0,0,0.18));
+  }
+
+  /* Faint circuit-style academic layer */
+  body.white-academic-bg::after {
+    content: "";
+    position: fixed;
+    inset: 0;
+    pointer-events: none;
+    z-index: 0;
+    opacity: 0.42;
+    background:
+      radial-gradient(circle at 18% 26%, rgba(70, 130, 180, 0.28) 0 2px, transparent 3px),
+      radial-gradient(circle at 34% 66%, rgba(70, 130, 180, 0.18) 0 2px, transparent 3px),
+      radial-gradient(circle at 66% 30%, rgba(70, 130, 180, 0.20) 0 2px, transparent 3px),
+      radial-gradient(circle at 82% 72%, rgba(70, 130, 180, 0.16) 0 2px, transparent 3px),
+      linear-gradient(118deg, transparent 0 22%, rgba(70, 130, 180, 0.07) 22.1%, transparent 22.7% 100%),
+      linear-gradient(30deg, transparent 0 58%, rgba(70, 130, 180, 0.06) 58.1%, transparent 58.7% 100%);
+  }
+
+  /* Keeps page content above the background pattern */
+  #tlayout {
+    position: relative;
+    z-index: 1;
+    width: 100%;
+    background: transparent;
+    border-collapse: separate;
+    border-spacing: 0;
+  }
+
+  /* Main content white glass panel */
+  #layout-content {
+    background: rgba(255, 255, 255, 0.88);
+    backdrop-filter: blur(8px);
+    -webkit-backdrop-filter: blur(8px);
+    border-left: 1px solid rgba(70, 130, 180, 0.14);
+    box-shadow:
+      inset 0 1px 0 rgba(255, 255, 255, 0.90),
+      0 18px 45px rgba(31, 66, 99, 0.08);
+    padding: 22px 30px;
+  }
+
+  /* Left menu white academic style */
+  #layout-menu {
+    background:
+      linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(241, 247, 251, 0.94)) !important;
+    border-right: 1px solid rgba(70, 130, 180, 0.16);
+    box-shadow: 8px 0 26px rgba(31, 66, 99, 0.06);
+  }
+
+  .menu-category {
+    color: #264966;
+    font-weight: 700;
+    letter-spacing: 0.03em;
+  }
+
+  .menu-item a {
+    border-radius: 8px;
+    padding: 4px 8px;
+    transition: all 0.25s ease;
+  }
+
+  .menu-item a:hover,
+  .menu-item a.current {
+    background: rgba(70, 130, 180, 0.12);
+    color: #24577a;
+    text-decoration: none;
+  }
+
+  /* Top title refinement */
+  #toptitle {
+    border-bottom: 1px solid rgba(70, 130, 180, 0.22);
+    margin-bottom: 14px;
+    padding-bottom: 8px;
+  }
+
+  #toptitle h1 {
+    font-family: "Noto Sans KR", "Pretendard", "Inter", "Segoe UI", Arial, sans-serif;
+    font-weight: 800;
+    letter-spacing: 0.01em;
+    color: #356d99 !important;
+    text-shadow: 0 1px 0 rgba(255,255,255,0.95);
+  }
+
+  /* Section headings */
+  h2 {
+    color: #2f5f83;
+    font-family: "Noto Sans KR", "Pretendard", "Inter", "Segoe UI", Arial, sans-serif;
+    font-weight: 750;
+    letter-spacing: 0.015em;
+    border-left: 4px solid #4682b4;
+    padding-left: 10px;
+  }
+
+  /* Profile card */
+  .imgtable {
+    width: 100%;
+    table-layout: auto;
+    background: rgba(255, 255, 255, 0.78);
+    border: 1px solid rgba(70, 130, 180, 0.15);
+    border-radius: 18px;
+    box-shadow: 0 14px 34px rgba(31, 66, 99, 0.09);
+    padding: 14px;
+    margin-bottom: 18px;
+  }
+
+  .profile-img {
+    width: 190px;
+    vertical-align: top;
+  }
+
+  .profile-img img {
+    border-radius: 14px;
+    border: 1px solid rgba(70, 130, 180, 0.20);
+    box-shadow: 0 10px 22px rgba(31, 66, 99, 0.13);
+  }
+
+  .profile-info {
+    width: auto;
+    vertical-align: top;
+    font-size: 0.98rem;
+    line-height: 1.55;
+  }
+
+  #layout-content a,
+  .profile-info a {
+    color: #2f6f9f;
+    text-decoration: none;
+  }
+
+  #layout-content a:hover,
+  .profile-info a:hover {
+    color: #174b70;
+    text-decoration: underline;
+  }
+
+  /* Compact right-aligned News section */
+  .news-section {
+    width: 260px !important;
+    min-width: 260px;
+    max-width: 260px;
+    vertical-align: top;
+    text-align: left;
+    background:
+      linear-gradient(180deg, rgba(255,255,255,0.94), rgba(246,250,253,0.94));
+    border: 1px solid rgba(70, 130, 180, 0.16);
+    border-radius: 16px;
+    padding: 12px;
+    box-shadow: 0 10px 26px rgba(31, 66, 99, 0.08);
+  }
+
+  .news-section marquee {
+    height: 180px !important;
+    font-size: 0.88rem;
+    line-height: 1.45;
+  }
+
+  .news-section p {
+    margin: 0 0 10px 0;
+  }
+
+  #news-heading {
+    color: #b91c1c !important;
+    border-left: 0;
+    padding-left: 0;
+  }
+
+  /* Research area white card */
+  .research-area-card {
+    background:
+      linear-gradient(135deg, rgba(255,255,255,0.92), rgba(245,249,252,0.92));
+    border: 1px solid rgba(70, 130, 180, 0.15);
+    border-radius: 16px;
+    padding: 16px 18px;
+    box-shadow: 0 12px 28px rgba(31, 66, 99, 0.07);
+    margin-top: 8px;
+    margin-bottom: 16px;
+  }
+
+  .research-area-card ul {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(260px, 1fr));
+    gap: 8px 14px;
+    list-style: none;
+    padding-left: 0 !important;
+  }
+
+  .research-area-card li {
+    position: relative;
+    background: rgba(255,255,255,0.78);
+    border: 1px solid rgba(70, 130, 180, 0.13);
+    border-radius: 12px;
+    padding: 8px 10px 8px 32px;
+    margin-bottom: 0 !important;
+    box-shadow: 0 4px 12px rgba(31, 66, 99, 0.045);
+  }
+
+  .research-area-card li::before {
+    content: "▣";
+    position: absolute;
+    left: 11px;
+    top: 8px;
+    color: #4682b4;
+    font-size: 0.78rem;
+  }
+
+  /* Logo row */
+  .role-logo-row {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 18px;
+    margin-bottom: 8px;
+  }
+
+  .role-text-block {
+    line-height: 1.45;
+  }
+
+  .role-title {
+    font-size: 1.05rem;
+    font-weight: 700;
+    color: #1f2933;
+  }
+
+  .affiliation-logo-strip {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    flex-shrink: 0;
+  }
+
+  .snu-logo {
+    height: 58px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  .aislab-logo {
+    height: 58px;
+    width: auto;
+    object-fit: contain;
+  }
+
+  /* Bottom flag counter */
+  .flag-counter-footer {
+    margin-top: 28px;
+    padding-top: 14px;
+    border-top: 1px solid rgba(70, 130, 180, 0.18);
+    text-align: center;
+  }
+
+  .flag-counter-title {
+    font-family: "Noto Sans KR", "Pretendard", "Inter", "Segoe UI", Arial, sans-serif;
+    font-size: 0.92rem;
+    font-weight: 700;
+    color: #2f5f83;
+    letter-spacing: 0.02em;
+    margin-bottom: 8px;
+  }
+
+  .flag-counter-box {
+    display: inline-block;
+    background: rgba(255,255,255,0.82);
+    border: 1px solid rgba(70, 130, 180, 0.16);
+    border-radius: 12px;
+    padding: 10px 12px;
+    box-shadow: 0 8px 20px rgba(31, 66, 99, 0.07);
+  }
+
+  .flag-counter-box img {
+    max-width: 100%;
+    height: auto;
+    border: 0;
+  }
+
+  p {
+    line-height: 1.65;
+  }
+
+  @media screen and (max-width: 900px) {
+    #layout-content {
+      padding: 18px;
+    }
+
+    .imgtable,
+    .imgtable tr,
+    .imgtable td {
+      display: block;
+      width: 100%;
+    }
+
+    .profile-info {
+      padding-left: 0 !important;
+      margin-top: 12px;
+    }
+
+    .news-section {
+      width: 100% !important;
+      min-width: 0;
+      max-width: 100%;
+      margin-top: 14px;
+    }
+
+    .role-logo-row {
+      flex-direction: column;
+      align-items: flex-start;
+      gap: 10px;
+    }
+
+    .affiliation-logo-strip {
+      margin-top: 4px;
+    }
+
+    .snu-logo,
+    .aislab-logo {
+      height: 48px;
+    }
+  }
+</style>
 </head>
-<body>
+<body class="white-academic-bg">
 <table summary="Table for page layout." id="tlayout">
 <tr valign="top">
   <td id="layout-menu" style="vertical-align: top; height: 100vh; background-color: #f6f6f6;">
