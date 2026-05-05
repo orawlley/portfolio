@@ -74,23 +74,47 @@
 
   /* Main content white glass panel */
   #layout-content {
-    background: rgba(255, 255, 255, 0.88);
-    backdrop-filter: blur(8px);
-    -webkit-backdrop-filter: blur(8px);
-    border-left: 1px solid rgba(70, 130, 180, 0.14);
-    box-shadow:
-      inset 0 1px 0 rgba(255, 255, 255, 0.90),
-      0 18px 45px rgba(31, 66, 99, 0.08);
-    padding: 22px 30px;
-  }
+  width: calc(100% - 155px);
+  background: rgba(255, 255, 255, 0.88);
+  backdrop-filter: blur(8px);
+  -webkit-backdrop-filter: blur(8px);
+  border-left: 1px solid rgba(70, 130, 180, 0.14);
+  box-shadow:
+    inset 0 1px 0 rgba(255, 255, 255, 0.90),
+    0 18px 45px rgba(31, 66, 99, 0.08);
+  padding: 22px 30px;
+}
 
   /* Left menu white academic style */
-  #layout-menu {
-    background:
-      linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(241, 247, 251, 0.94)) !important;
-    border-right: 1px solid rgba(70, 130, 180, 0.16);
-    box-shadow: 8px 0 26px rgba(31, 66, 99, 0.06);
-  }
+  /* Left menu white academic style */
+#layout-menu {
+  width: 155px !important;
+  min-width: 155px !important;
+  max-width: 155px !important;
+  background:
+    linear-gradient(180deg, rgba(255, 255, 255, 0.96), rgba(241, 247, 251, 0.94)) !important;
+  border-right: 1px solid rgba(70, 130, 180, 0.16);
+  box-shadow: 8px 0 26px rgba(31, 66, 99, 0.06);
+  padding-left: 8px;
+  padding-right: 8px;
+}
+    /* SNU logo above Home tab: compact normal size */
+.sidebar-snu-logo-box {
+  text-align: center;
+  padding: 8px 4px 12px 4px;
+  margin-bottom: 8px;
+  border-bottom: 1px solid rgba(70, 130, 180, 0.16);
+}
+
+.sidebar-snu-logo {
+  width: 82px;
+  max-width: 82px;
+  height: auto;
+  object-fit: contain;
+  display: block;
+  margin: 0 auto;
+  filter: drop-shadow(0 4px 8px rgba(31, 66, 99, 0.10));
+}
 
   .menu-category {
     color: #264966;
@@ -370,7 +394,7 @@
     <div class="sidebar-snu-logo-box">
   <a href="https://en.snu.ac.kr/" target="_blank">
     <img src="snu-logo.png"
-         alt="Seoul National University Logo"
+         alt="Seoul National University"
          class="sidebar-snu-logo" />
   </a>
 </div>
@@ -404,12 +428,6 @@
         <span class="role-title">Postdoctoral Researcher</span>
       </p>
     </div>
-
-    <div class="affiliation-logo-strip">
-      <img src="snu-logo.png" alt="Seoul National University" class="snu-logo" />
-      <img src="inmc-logo.png" alt="INMC" class="aislab-logo" />
-    </div>
-  </div>
 
   <p style="margin-top: 0.4vw;">
     <a href="https://inmc.snu.ac.kr/">Institute of New Media and Communications (INMC),</a> <br />
