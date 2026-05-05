@@ -387,90 +387,13 @@
       height: 48px;
     }
   }
-    /* ===== Academic profile icon row ===== */
-.academic-icon-row {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-  margin-top: 12px;
-  flex-wrap: wrap;
-}
 
-.academic-icon-link {
-  width: 38px;
-  height: 38px;
-  border-radius: 50%;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  background: rgba(255, 255, 255, 0.88);
-  border: 1px solid rgba(70, 130, 180, 0.24);
-  box-shadow: 0 6px 16px rgba(31, 66, 99, 0.08);
-  text-decoration: none !important;
-  transition: transform 0.22s ease, box-shadow 0.22s ease, background 0.22s ease;
-}
-
-.academic-icon-link:hover {
-  transform: translateY(-2px);
-  background: rgba(239, 247, 252, 0.98);
-  box-shadow: 0 10px 22px rgba(31, 66, 99, 0.14);
-  text-decoration: none !important;
-}
-
-/* Google Scholar icon */
-.icon-scholar {
-  font-size: 19px;
-  line-height: 1;
-}
-
-/* ORCID icon */
-.icon-orcid {
-  width: 25px;
-  height: 25px;
-  border-radius: 50%;
-  background: #a6ce39;
-  color: white;
-  font-weight: 800;
-  font-size: 13px;
-  font-family: Arial, sans-serif;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  letter-spacing: -0.04em;
-}
-
-/* LinkedIn icon */
-.icon-linkedin {
-  width: 24px;
-  height: 24px;
-  border-radius: 5px;
-  background: #0a66c2;
-  color: white;
-  font-weight: 800;
-  font-size: 15px;
-  font-family: Arial, sans-serif;
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* INMC logo icon */
-.inmc-icon-box {
-  width: 62px;
-  border-radius: 20px;
-  padding: 0 8px;
-}
-
-.inmc-small-logo {
-  max-width: 50px;
-  max-height: 28px;
-  object-fit: contain;
-}
     /* ===== Compact academic/social icon row below affiliation ===== */
+/* ===== Compact academic/social icon row below affiliation ===== */
 .profile-icon-row {
   display: flex;
   align-items: center;
-  gap: 14px;
+  gap: 15px;
   margin-top: 10px;
   margin-bottom: 4px;
   flex-wrap: wrap;
@@ -493,24 +416,25 @@
 
 /* Controls the icon size */
 .profile-icon-row i {
+  font-size: 23px;
+  line-height: 1;
+}
+
+/* Academicons: Google Scholar and ORCID */
+.profile-icon-row .ai {
   font-size: 24px;
   line-height: 1;
 }
 
-/* Slightly wider text-like academic icons */
-.profile-icon-row .ai {
-  font-size: 25px;
-}
-
 /* INMC image icon */
 .profile-icon-row .inmc-profile-icon {
-  height: 26px;
+  height: 24px;
   width: auto;
   object-fit: contain;
   display: block;
 }
 
-/* Optional small note below icons */
+/* Small contact note below icons */
 .profile-contact-note {
   margin-top: 8px;
   font-size: 0.88rem;
@@ -520,16 +444,16 @@
 /* Mobile adjustment */
 @media screen and (max-width: 900px) {
   .profile-icon-row {
-    gap: 11px;
+    gap: 12px;
   }
 
   .profile-icon-row i,
   .profile-icon-row .ai {
-    font-size: 22px;
+    font-size: 21px;
   }
 
   .profile-icon-row .inmc-profile-icon {
-    height: 24px;
+    height: 22px;
   }
 }
 </style>
@@ -590,44 +514,56 @@
   <b>Contact:</b> <a href="mailto:p20200063@pilani.bits-pilani.ac.in">p20200063@pilani.bits-pilani.ac.in</a>, <a href="mailto:oshinrawlley@ieee.org">oshinrawlley@ieee.org</a> <br/>
   <b>Phone: </b>+91-1596-25-5453 (Office) <br/>-->
 
-  <div class="academic-icon-row">
+  <div class="profile-icon-row">
 
-  <a class="academic-icon-link"
-     href="https://scholar.google.com/citations?user=vemj_AsAAAAJ"
+  <a href="mailto:oshinrawlley@ieee.org"
+     title="Email"
+     aria-label="Email">
+    <i class="fa-solid fa-envelope"></i>
+  </a>
+
+  <a href="https://scholar.google.com/citations?user=vemj_AsAAAAJ"
      target="_blank"
      title="Google Scholar"
      aria-label="Google Scholar">
-    <span class="icon-scholar">🎓</span>
+    <i class="ai ai-google-scholar"></i>
   </a>
 
-  <a class="academic-icon-link"
-     href="https://orcid.org/0000-0003-0786-3987"
+  <a href="https://orcid.org/0000-0003-0786-3987"
      target="_blank"
      title="ORCID"
      aria-label="ORCID">
-    <span class="icon-orcid">iD</span>
+    <i class="ai ai-orcid"></i>
   </a>
 
-  <a class="academic-icon-link"
-     href="https://www.linkedin.com/in/oshin-r-835b43a1"
+  <a href="https://www.linkedin.com/in/oshin-r-835b43a1"
      target="_blank"
      title="LinkedIn"
      aria-label="LinkedIn">
-    <span class="icon-linkedin">in</span>
+    <i class="fa-brands fa-linkedin"></i>
   </a>
 
-  <a class="academic-icon-link inmc-icon-box"
-     href="https://inmc.snu.ac.kr/"
+  <a href="https://github.com/"
+     target="_blank"
+     title="GitHub"
+     aria-label="GitHub">
+    <i class="fa-brands fa-github"></i>
+  </a>
+
+  <a href="https://inmc.snu.ac.kr/"
      target="_blank"
      title="INMC"
      aria-label="INMC">
     <img src="inmc-logo.png"
          alt="INMC Logo"
-         class="inmc-small-logo" />
+         class="inmc-profile-icon" />
   </a>
 
 </div>
 
+<p class="profile-contact-note">
+  The best way to reach out to me is via email.
+</p>
 </td>
         <!-- News Section -->
         <td class="news-section" style="width: 260px; max-width: 260px; vertical-align: top;">
