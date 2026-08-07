@@ -45,22 +45,156 @@ nav{
 .links a.active,.links a:hover{color:var(--blue);text-decoration:none}
 
 main{padding-top:46px;padding-bottom:60px}
-.profile{
-  float:right;width:24%;margin:0 0 18px 28px;
+/* MAIN BIO + RIGHT PROFILE:
+   both columns start and finish cleanly */
+.intro-section{
+  display:grid;
+  grid-template-columns:minmax(0,1fr) 270px;
+  column-gap:36px;
+  align-items:stretch;
 }
+
+.profile{
+  width:100%;
+  margin:0;
+  display:flex;
+  flex-direction:column;
+  height:100%;
+}
+
 .profile img{
-  width:100%;display:block;border-radius:4px;
+  width:100%;
+  display:block;
+  border-radius:2px;
   box-shadow:0 2px 8px rgba(0,0,0,.15);
 }
-.profile h3{font-size:18px;margin:10px 0 2px;font-weight:500}
-.role{font-size:13.5px;color:#222;margin:0 0 7px}
-.small{font-size:13px;line-height:1.5;margin:0 0 6px}
-.icons{margin:10px 0 7px;display:flex;gap:9px;flex-wrap:wrap}
-.icons a{font-size:13px}
-.fellow{font-size:12.8px;border-top:1px solid var(--line);padding-top:8px;margin-top:8px}
 
-.bio p{text-align:justify;margin:0 0 14px}
-.clear{clear:both}
+.profile h3{
+  font-size:18px;
+  margin:14px 0 2px;
+  font-weight:500;
+}
+
+.role{
+  font-size:14px;
+  color:#222;
+  margin:0 0 8px;
+}
+
+.small{
+  font-size:13.5px;
+  line-height:1.52;
+  margin:0 0 11px;
+}
+
+
+/* CONTACT ROWS */
+
+.contact-info{
+  margin-top:5px;
+}
+
+.contact-row{
+  display:grid;
+  grid-template-columns:26px 1fr;
+  column-gap:8px;
+  align-items:start;
+
+  margin-bottom:12px;
+
+  font-size:13.5px;
+  line-height:1.5;
+}
+
+.contact-row i{
+  color:#0066cc;
+  font-size:19px;
+  width:24px;
+  text-align:center;
+  margin-top:2px;
+}
+
+.contact-row a{
+  color:#003087;
+}
+
+
+/* LARGE CLICKABLE ACADEMIC ICONS */
+
+.academic-icons{
+  margin-top:auto;
+
+  padding-top:17px;
+  padding-bottom:15px;
+
+  display:flex;
+  align-items:center;
+  justify-content:flex-start;
+  gap:19px;
+}
+
+.academic-icons a{
+  color:#0066cc;
+  font-size:25px;
+  line-height:1;
+  transition:transform .15s ease, color .15s ease;
+}
+
+.academic-icons a:hover{
+  color:#003087;
+  text-decoration:none;
+  transform:translateY(-2px);
+}
+
+
+/* FELLOWSHIP */
+
+.fellow{
+  border-top:1px solid #e5e5e5;
+  padding-top:10px;
+
+  font-size:13px;
+  line-height:1.5;
+}
+
+
+/* LEFT BIO */
+
+.bio{
+  min-width:0;
+  display:flex;
+  flex-direction:column;
+}
+
+.bio p{
+  text-align:justify;
+  margin:0 0 17px;
+}
+
+
+/* MOBILE */
+
+@media(max-width:760px){
+
+  .intro-section{
+    display:block;
+  }
+
+  .profile{
+    width:100%;
+    margin-bottom:28px;
+  }
+
+  .profile img{
+    width:210px;
+    max-width:70%;
+  }
+
+  .academic-icons{
+    margin-top:18px;
+  }
+
+}
 hr{border:0;border-top:1px solid var(--line);margin:28px 0 0}
 
 section{margin-top:30px}
@@ -93,6 +227,8 @@ footer{
   .news-item{grid-template-columns:1fr;gap:3px}
 }
 </style>
+  <link rel="stylesheet"
+href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
 </head>
 
 <body>
@@ -127,56 +263,18 @@ footer{
 
 <main class="container">
 
-  <aside class="profile">
-    <img src="profile01.jpg" alt="Oshin Rawlley">
-    <h3>Oshin Rawlley</h3>
-    <p class="role">Ph.D. Research Scholar</p>
-    <p class="small">
-      <a href="https://www.bits-pilani.ac.in/pilani/computer-science-information-systems/">Department of Computer Science &amp; Information Systems</a><br>
-      <a href="https://www.bits-pilani.ac.in/pilani/">BITS Pilani, Pilani Campus</a>
-    </p>
-    <p class="small"><b>Address:</b> Lab-6021, Disruptive Technologies Lab, Dept. of CSIS, BITS Pilani, Rajasthan 333031</p>
-    <p class="small"><b>Email:</b><br>
-      <a href="mailto:p20200063@pilani.bits-pilani.ac.in">p20200063@pilani.bits-pilani.ac.in</a><br>
-      <a href="mailto:oshinrawlley@ieee.org">oshinrawlley@ieee.org</a>
-    </p>
-    <p class="small"><b>Phone:</b> +91-1596-25-5453</p>
-    <div class="icons">
-      <a href="https://scholar.google.com/citations?user=vemj_AsAAAAJ">Google Scholar</a>
-      <a href="https://orcid.org/0000-0003-0786-3987">ORCID</a>
-      <a href="https://www.linkedin.com/in/oshin-r-835b43a1">LinkedIn</a>
-      <a href="https://www.linkedin.com/in/oshin-r-835b43a1">GitHub</a>
-    </div>
-    <div class="fellow">
-      <a href="https://drishticps.iiti.ac.in/">CHANAKYA Fellow</a><br>
-      DRISHTI CPS Foundation, IIT Indore
-    </div>
-  </aside>
+  <div class="intro-section">
 
-  <div class="bio">
-    <p>
-      I am a Chanakya Ph.D. Fellow Awardee sponsored by
-      <a href="https://drishticps.iiti.ac.in/">DRISHTI CPS, Indian Institute of Technology Indore (IIT Indore)</a>.
-      I have completed my Ph.D. in the broad area of Computer Vision in Autonomous Vehicles in the Disruptive Technologies Lab,
-      Department of CSIS, BITS Pilani, Pilani Campus. I was advised by
-      <a href="https://www.bits-pilani.ac.in/pilani/shashank-gupta/">Dr. Shashank Gupta</a>.
-    </p>
-    <p>
-      My research interests are majorly in <em>Internet of Vehicles (IoV), Edge Computing and Computer Vision in Autonomous Vehicles</em>.
-      I am a student member of IEEE, ACM and an affiliate member of DRISHTI CPS, IIT Indore.
-      I am also a review committee member of journals, transactions and conferences of international repute.
-    </p>
-    <p>
-      I received an <a href="https://anrfonline.in/ANRF/its">International Travel Support (ITS) Fellowship, ANRF</a>, India,
-      for presenting a manuscript in the broad domain of Intelligent Transportation Systems at the
-      <a href="https://ieee-iv.org/2024/">35th IEEE Intelligent Vehicles Symposium (IV 2024)</a>, held in Jeju Island, South Korea.
-    </p>
-    <p>
-      My research particularly piques interest in the AI-driven modelling of Internet of Vehicles (IoV) in the broader domain of
-      Edge Computing (EC) and Computer Vision in Autonomous Vehicles (AV). I am also interested in exploring the interplay between EC
-      and AI to address practical perception challenges in vehicular environments and tackle energy-related concerns within IoV systems.
-    </p>
+    <div class="bio">
+      <!-- YOUR CURRENT LEFT-SIDE BIOGRAPHY -->
+    </div>
+
+    <aside class="profile">
+      <!-- NEW PROFILE CODE ABOVE -->
+    </aside>
+
   </div>
+  <hr>
 
   <div class="clear"></div>
   <hr>
