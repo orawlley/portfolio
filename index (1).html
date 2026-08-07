@@ -1,0 +1,248 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>Oshin Rawlley</title>
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;500;700&family=Roboto+Slab:wght@300;400;500;700&display=swap" rel="stylesheet">
+
+<style>
+:root{
+  --blue:#003087;
+  --text:#111;
+  --muted:#5a5a5a;
+  --line:#e6e6e6;
+  --max:930px;
+}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{
+  margin:0;
+  padding-top:56px;
+  font-family:"Roboto",Arial,sans-serif;
+  color:var(--text);
+  background:#fff;
+  font-size:15.5px;
+  line-height:1.55;
+}
+a{color:var(--blue);text-decoration:none}
+a:hover{text-decoration:underline}
+.container{max-width:var(--max);margin:auto;padding:0 18px}
+
+nav{
+  position:fixed;top:0;left:0;right:0;z-index:1000;
+  height:56px;background:rgba(255,255,255,.98);
+  border-bottom:1px solid var(--line);
+}
+.nav-inner{height:56px;display:flex;align-items:center;gap:24px}
+.brand{font-size:18px;color:#111;white-space:nowrap}
+.brand b{font-weight:500}.brand span{font-weight:300}
+.links{margin-left:auto;display:flex;gap:17px;align-items:center}
+.links a{color:#111;font-size:14px}
+.links a.active,.links a:hover{color:var(--blue);text-decoration:none}
+
+main{padding-top:46px;padding-bottom:60px}
+.profile{
+  float:right;width:24%;margin:0 0 18px 28px;
+}
+.profile img{
+  width:100%;display:block;border-radius:4px;
+  box-shadow:0 2px 8px rgba(0,0,0,.15);
+}
+.profile h3{font-size:18px;margin:10px 0 2px;font-weight:500}
+.role{font-size:13.5px;color:#222;margin:0 0 7px}
+.small{font-size:13px;line-height:1.5;margin:0 0 6px}
+.icons{margin:10px 0 7px;display:flex;gap:9px;flex-wrap:wrap}
+.icons a{font-size:13px}
+.fellow{font-size:12.8px;border-top:1px solid var(--line);padding-top:8px;margin-top:8px}
+
+.bio p{text-align:justify;margin:0 0 14px}
+.clear{clear:both}
+hr{border:0;border-top:1px solid var(--line);margin:28px 0 0}
+
+section{margin-top:30px}
+h2{font-size:24px;font-weight:400;margin:0 0 14px}
+section p{margin:0 0 9px}
+
+.edu{display:grid;grid-template-columns:82px 1fr 105px;gap:12px;padding:8px 0}
+.edu .yr{text-align:right;color:var(--muted);font-size:14px}
+
+.news{max-height:250px;overflow-y:auto;padding-right:8px}
+.news-item{
+  display:grid;grid-template-columns:105px 1fr;gap:16px;
+  padding:10px 0;border-bottom:1px solid #f0f0f0
+}
+.news-date{font-size:13.5px;color:#444}
+footer{
+  border-top:1px solid var(--line);
+  text-align:center;color:#777;font-size:12px;padding:16px 0 26px
+}
+.menu-btn{display:none;margin-left:auto;border:0;background:none;font-size:24px}
+@media(max-width:760px){
+  .links{display:none}
+  .menu-btn{display:block}
+  main{padding-top:30px}
+  .profile{float:none;width:100%;margin:0 0 24px}
+  .profile img{width:205px;max-width:70%}
+  .bio p{text-align:left}
+  .edu{grid-template-columns:1fr}
+  .edu .yr{text-align:left}
+  .news-item{grid-template-columns:1fr;gap:3px}
+}
+</style>
+</head>
+
+<body>
+
+<nav>
+  <div class="container nav-inner">
+    <a class="brand" href="index.html"><b>Oshin</b><span> Rawlley</span></a>
+    <div class="links">
+      <a class="active" href="index.html">Home</a>
+      <a href="teaching.html">Teaching</a>
+      <a href="publication.html">Publications</a>
+      <a href="research-projects.html">Fellowships/Projects</a>
+      <a href="awards.html">Awards</a>
+      <a href="professional-activities.html">Professional Activities</a>
+      <a href="CV.pdf" target="_blank">CV</a>
+    </div>
+    <button class="menu-btn" onclick="document.getElementById('mobileLinks').style.display = document.getElementById('mobileLinks').style.display==='block'?'none':'block'">☰</button>
+  </div>
+</nav>
+
+<div id="mobileLinks" style="display:none;border-bottom:1px solid #e6e6e6;padding:12px 18px;position:fixed;top:56px;left:0;right:0;background:white;z-index:999">
+  <div style="max-width:930px;margin:auto;display:grid;gap:8px;text-align:right">
+    <a href="index.html">Home</a>
+    <a href="teaching.html">Teaching</a>
+    <a href="publication.html">Publications</a>
+    <a href="research-projects.html">Fellowships/Projects</a>
+    <a href="awards.html">Awards</a>
+    <a href="professional-activities.html">Professional Activities</a>
+    <a href="CV.pdf" target="_blank">CV</a>
+  </div>
+</div>
+
+<main class="container">
+
+  <aside class="profile">
+    <img src="profile01.jpg" alt="Oshin Rawlley">
+    <h3>Oshin Rawlley</h3>
+    <p class="role">Ph.D. Research Scholar</p>
+    <p class="small">
+      <a href="https://www.bits-pilani.ac.in/pilani/computer-science-information-systems/">Department of Computer Science &amp; Information Systems</a><br>
+      <a href="https://www.bits-pilani.ac.in/pilani/">BITS Pilani, Pilani Campus</a>
+    </p>
+    <p class="small"><b>Address:</b> Lab-6021, Disruptive Technologies Lab, Dept. of CSIS, BITS Pilani, Rajasthan 333031</p>
+    <p class="small"><b>Email:</b><br>
+      <a href="mailto:p20200063@pilani.bits-pilani.ac.in">p20200063@pilani.bits-pilani.ac.in</a><br>
+      <a href="mailto:oshinrawlley@ieee.org">oshinrawlley@ieee.org</a>
+    </p>
+    <p class="small"><b>Phone:</b> +91-1596-25-5453</p>
+    <div class="icons">
+      <a href="https://scholar.google.com/citations?user=vemj_AsAAAAJ">Google Scholar</a>
+      <a href="https://orcid.org/0000-0003-0786-3987">ORCID</a>
+      <a href="https://www.linkedin.com/in/oshin-r-835b43a1">LinkedIn</a>
+      <a href="https://www.linkedin.com/in/oshin-r-835b43a1">GitHub</a>
+    </div>
+    <div class="fellow">
+      <a href="https://drishticps.iiti.ac.in/">CHANAKYA Fellow</a><br>
+      DRISHTI CPS Foundation, IIT Indore
+    </div>
+  </aside>
+
+  <div class="bio">
+    <p>
+      I am a Chanakya Ph.D. Fellow Awardee sponsored by
+      <a href="https://drishticps.iiti.ac.in/">DRISHTI CPS, Indian Institute of Technology Indore (IIT Indore)</a>.
+      I have completed my Ph.D. in the broad area of Computer Vision in Autonomous Vehicles in the Disruptive Technologies Lab,
+      Department of CSIS, BITS Pilani, Pilani Campus. I was advised by
+      <a href="https://www.bits-pilani.ac.in/pilani/shashank-gupta/">Dr. Shashank Gupta</a>.
+    </p>
+    <p>
+      My research interests are majorly in <em>Internet of Vehicles (IoV), Edge Computing and Computer Vision in Autonomous Vehicles</em>.
+      I am a student member of IEEE, ACM and an affiliate member of DRISHTI CPS, IIT Indore.
+      I am also a review committee member of journals, transactions and conferences of international repute.
+    </p>
+    <p>
+      I received an <a href="https://anrfonline.in/ANRF/its">International Travel Support (ITS) Fellowship, ANRF</a>, India,
+      for presenting a manuscript in the broad domain of Intelligent Transportation Systems at the
+      <a href="https://ieee-iv.org/2024/">35th IEEE Intelligent Vehicles Symposium (IV 2024)</a>, held in Jeju Island, South Korea.
+    </p>
+    <p>
+      My research particularly piques interest in the AI-driven modelling of Internet of Vehicles (IoV) in the broader domain of
+      Edge Computing (EC) and Computer Vision in Autonomous Vehicles (AV). I am also interested in exploring the interplay between EC
+      and AI to address practical perception challenges in vehicular environments and tackle energy-related concerns within IoV systems.
+    </p>
+  </div>
+
+  <div class="clear"></div>
+  <hr>
+
+  <section>
+    <h2>Research Interests</h2>
+    <p><b>Primary:</b> Edge Computing, Network Orchestration, Internet of Vehicles (IoV).</p>
+    <p><b>Application Verticals:</b> Mobility Applications, Intelligent Transportation Systems.</p>
+    <p><b>Future Interests:</b> AI-RAN, Sustainable Computing and Intelligent Networking.</p>
+  </section>
+
+  <section>
+    <h2>Education</h2>
+
+    <div class="edu">
+      <div><b>Ph.D.</b></div>
+      <div>Department of Computer Science &amp; Information Systems,
+        <a href="https://www.bits-pilani.ac.in/pilani/">Birla Institute of Technology and Science, Pilani, Rajasthan</a>
+      </div>
+      <div class="yr">2020–Present</div>
+    </div>
+
+    <div class="edu">
+      <div><b>M.Tech.</b></div>
+      <div>Department of Computer Science Engineering,
+        <a href="https://www.amity.edu/">Amity University, Noida, Uttar Pradesh</a>
+      </div>
+      <div class="yr">2016–2018</div>
+    </div>
+
+    <div class="edu">
+      <div><b>B.Tech.</b></div>
+      <div>Department of Computer Science,
+        <a href="https://www.rgpv.ac.in/">Rajiv Gandhi Proudyogiki Vishwavidalaya, Bhopal, Madhya Pradesh</a>
+      </div>
+      <div class="yr">2011–2015</div>
+    </div>
+  </section>
+
+  <section>
+    <h2>News</h2>
+    <div class="news">
+      <div class="news-item">
+        <div class="news-date">Aug 4, 2025</div>
+        <div><a href="https://ieeexplore.ieee.org/document/11112789">Semantic Communication and Digital-Twin Deployment in Transportation Networks</a> accepted in <b>IEEE Transactions on Intelligent Transportation Systems</b>.</div>
+      </div>
+      <div class="news-item">
+        <div class="news-date">Mar 20, 2025</div>
+        <div><a href="https://www.sciencedirect.com/science/article/pii/S0167739X25001128">High Speed Green IoV Framework</a> accepted in <b>Future Generation Computer Systems</b>.</div>
+      </div>
+      <div class="news-item">
+        <div class="news-date">2024</div>
+        <div>Presented research at <a href="https://ieeexplore.ieee.org/abstract/document/10588439">IEEE Intelligent Vehicles Symposium 2024</a>, Jeju Island, South Korea.</div>
+      </div>
+      <div class="news-item">
+        <div class="news-date">Aug 12, 2024</div>
+        <div>New paper <a href="https://ieeexplore.ieee.org/abstract/document/10588439">published</a> in <b>IEEE Transactions on Consumer Electronics</b>.</div>
+      </div>
+    </div>
+  </section>
+
+</main>
+
+<footer>
+  <div class="container">© 2026 Oshin Rawlley</div>
+</footer>
+
+</body>
+</html>
